@@ -26,6 +26,7 @@ body {
   }
 }
 
+
 .main {
   display: block;
   width: 400px;
@@ -42,11 +43,6 @@ body {
   text-transform: uppercase;
 }
 
-.add__input {
-  width: 318px;
-  margin-top: 20px;
-}
-
 .button {
   background: none;
   border: 0;
@@ -61,7 +57,11 @@ body {
   color: #3a3a3a;
 }
 
-.button.button--delete:hover {
+.button--add:hover {
+  color: #0fc57c;
+}
+
+.button--delete:hover {
   color: #cf2323;
 }
 
@@ -75,16 +75,31 @@ body {
   transform: rotateZ(0);
 }
 
+.add__input {
+  width: 318px;
+  margin-top: 20px;
+}
+
 
 .task-list {
   margin: 0;
   padding: 0;
 }
 
-.task__name {
-  width: 56%;
-  display: inline-block;
+.task {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
   list-style: none;
+}
+
+.task__name {
+  width: 55%;
+  display: inline-block;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+
 }
 
 .task__text {
@@ -99,24 +114,11 @@ body {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
-  width: 226px
+  width: 56%;
 }
 
 .task__text:focus {
   color: #333;
-}
-
-/* New Task */
-
-.button:hover {
-  color: #0fc57c;
-}
-
-/* Task list */
-.task {
-  overflow: hidden;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
 }
 
 .task > * {
@@ -125,13 +127,6 @@ body {
 
 .task__check {
   margin: 0 10px;
-}
-
-li > label {
-  padding-left: 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  width: 226px;
 }
 
 /* Completed */
@@ -144,14 +139,14 @@ li > label {
 
 .task--edit .task__text {
   display: inline-block;
-  width: 200px
+  width: 50%;
 }
 
 .task--edit .task__name {
   display: none;
 }
 
-input,
-button {
+.task__name,
+.button {
   outline: none;
 }
