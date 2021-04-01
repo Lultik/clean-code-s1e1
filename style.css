@@ -28,7 +28,7 @@ body {
 
 .main {
   display: block;
-  width: 400px;
+  width: 500px;
   margin: 0 auto 0;
 }
 
@@ -60,10 +60,6 @@ body {
   color: #0fc57c;
 }
 
-.button--delete:hover {
-  color: #cf2323;
-}
-
 .button__img {
   height: 2em;
   transform: rotateZ(45deg);
@@ -74,9 +70,15 @@ body {
   transform: rotateZ(0);
 }
 
+.task-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .add__input {
   width: 318px;
-  margin-top: 20px;
+  flex-grow: 1;
 }
 
 
@@ -90,6 +92,9 @@ body {
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .task__name {
@@ -102,6 +107,7 @@ body {
 
 .task__text {
   display: none;
+  flex-grow: 1;
   margin: 0;
   font-size: 18px;
   line-height: 18px;
